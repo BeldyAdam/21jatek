@@ -72,7 +72,7 @@ def jatekos_vesztett_tobbet_huzott_teszt():
 
 def folyamatabra():
 #    jP = ossz(jL)
-#   gP = ossz(gL)
+#    gP = ossz(gL)
 
 #    jDb = lapDb(jL)
 #    gDb = lapDb(gL)
