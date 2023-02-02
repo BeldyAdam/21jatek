@@ -16,49 +16,58 @@ def lapok_osszege(lapok:[int]):
     return pontok
 
 
-#Teszt esetek
+# Teszt esetek
 def teszt_esetek():
-    jatekos_vesztett()
-    teszt_esetek()
-
-def jatekos_vesztett():
-    jatekos = [10,9,3]
-    gep = [10,9]
-    vart_eredmeny ="Játékos vesztett"
-    kapott_eredmeny = eredmeny(gep,jatekos)
-    if kapott_eredmeny == vart_eredmeny:
-        print("A teszt sikerült")
-    else:
-        print("A teszt nem sikerült")
-
-def jatekos_tobb_21(allapot):
-    jatekos_vesztett()
-
-def jatekos_kevesebb_gep():
-    jatekos_vesztett()
+    jatekos_vesztett_21_nagyobb_teszt()
+    jatekos_vesztett_21_kevesebb_teszt()
+    jatekos_vesztett_tobbet_huzott_teszt()
+    dontetlen_teszt()
+    gep_vesztett_21_nagyobb_teszt()
+    gep_vesztett_21_kevesebb_teszt()
+    gep_vesztett_tobbet_huzott_teszt()
 
 
 def jatekos_vesztett_21_nagyobb_teszt():
-    j_lapok = [10, 9, 3]
-    g_lapok = [10, 9]
+    jlapok = [10, 9, 4]
+    glapok = [10, 9]
     vart_eredmeny = "A játékos vesztett!"
-    kapott_eredmeny = eredmeny(j_lapok, g_lapok)
+    kapott_eredmeny = eredmeny(jlapok, glapok)
     if vart_eredmeny == kapott_eredmeny:
-        print("A játékos 21-nél több, a teszt sikeres")
+        print("A játékos 21-nél több teszt sikeres")
     else:
-        print("A játékos 21-nél több, a teszt megbukott")
+        print("A játékos 21-nél több teszt megbukott")
 
 
 def jatekos_vesztett_21_kevesebb_teszt():
-    j_lapok = [10, 9, 1]
-    g_lapok = [10, 9, 2]
+    jlapok = [10, 9, 1]
+    glapok = [10, 9, 2]
     vart_eredmeny = "A játékos vesztett!"
-    kapott_eredmeny = eredmeny(j_lapok, g_lapok)
+    kapott_eredmeny = eredmeny(jlapok, glapok)
     if vart_eredmeny == kapott_eredmeny:
-        print("A játékos 21-nél kevesebb, a teszt sikeres")
+        print("A játékos 21-nél kevesebb teszt sikeres")
     else:
-        print("A játékos 21-nél kevesebb, a teszt megbukott")
+        print("A játékos '21-nél kevesebb' teszt megbukott")
 
+def gep_vesztett_tobbet_huzott_teszt():
+    jlapok = [10, 9, 2]
+    glapok = [10, 9, 1, 1]
+    vart_eredmeny = "A gép vesztett!"
+    kapott_eredmeny = eredmeny(jlapok, glapok)
+    if vart_eredmeny == kapott_eredmeny:
+        print("A gép több húzás teszt sikeres")
+    else:
+        print("A gép több húzás teszt megbukott")
+
+
+def dontetlen_teszt():
+    jatekos_lapok = [5, 8]
+    gep_lapok = [8, 5]
+    vart_eredmeny = "Döntetlen, osztoztok a nyereségen"
+    kapott_eredmeny = eredmeny(jatekos_lapok, gep_lapok)
+    if kapott_eredmeny == vart_eredmeny:
+        print("A döntetlen teszt sikeres")
+    else:
+        print("A döntetlen teszt megbukott")
 
 def jatekos_vesztett_tobbet_huzott_teszt():
     jlapok = [10, 9, 1, 1]
@@ -66,9 +75,35 @@ def jatekos_vesztett_tobbet_huzott_teszt():
     vart_eredmeny = "A játékos vesztett!"
     kapott_eredmeny = eredmeny(jlapok, glapok)
     if vart_eredmeny == kapott_eredmeny:
-        print("A játékos többet húzott teszt sikeres")
+        print("A játékos több húzás teszt sikeres")
     else:
-        print("A játékos többet húzott teszt megbukott")
+        print("A játékos több húzás teszt megbukott")
+
+
+def gep_vesztett_21_nagyobb_teszt():
+    jlapok = [10, 9]
+    glapok = [10, 9, 3]
+    vart_eredmeny = "A gép vesztett!"
+    kapott_eredmeny = eredmeny(jlapok, glapok)
+    if vart_eredmeny == kapott_eredmeny:
+        print("A gép 21-nél több teszt sikeres")
+    else:
+        print("A gép 21-nél több teszt megbukott")
+
+
+def gep_vesztett_21_kevesebb_teszt():
+    jlapok = [10, 9, 2]
+    glapok = [10, 9, 1]
+    vart_eredmeny = "A gép vesztett!"
+    kapott_eredmeny = eredmeny(jlapok, glapok)
+    if vart_eredmeny == kapott_eredmeny:
+        print("A gép 21-nél kevesebb teszt sikeres")
+    else:
+        print("A gép 21-nél kevesebb teszt megbukott")
+
+
+
+
 
 def folyamatabra():
 #    jP = ossz(jL)
